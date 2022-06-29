@@ -1,11 +1,9 @@
-import 'dart:html';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../components/editor.dart';
 import '../main.dart';
-import '../models/conteudo_card.dart';
+import '../models/entity.dart';
 
 class FormularioCard extends StatelessWidget {
   final TextEditingController _tituloController = TextEditingController();
@@ -43,11 +41,8 @@ class FormularioCard extends StatelessWidget {
   void _criaCardEntidade(BuildContext context) {
     final String titulo = _tituloController.text;
     final String subtitulo = _subtituloController.text;
-    print("Chegou no criar entidade antes do if");
     if (titulo != null && subtitulo != null) {
-      print("Passou do if :)");
-      final conteudoCard = ConteudoCard(titulo, subtitulo);
-      print("${conteudoCard.titulo} - ${conteudoCard.subtitulo}");
+      final conteudoCard = Entity(0, titulo, subtitulo);
       Navigator.pop(context, conteudoCard);
     }
   }

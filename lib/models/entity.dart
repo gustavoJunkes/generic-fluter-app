@@ -1,8 +1,9 @@
-class ConteudoCard {
+class Entity {
+  final int id;
   final String titulo;
   final String subtitulo;
 
-  ConteudoCard(this.titulo, this.subtitulo);
+  Entity(this.id, this.titulo, this.subtitulo);
 
   @override
   String toString() {

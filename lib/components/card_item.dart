@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../models/conteudo_card.dart';
+import '../models/entity.dart';
 
 class CardItem extends StatelessWidget {
-  final ConteudoCard _conteudoCard;
+  final Entity _conteudoCard;
   const CardItem(this._conteudoCard);
 
   @override
