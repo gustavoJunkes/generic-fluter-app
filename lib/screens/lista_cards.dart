@@ -22,7 +22,7 @@ class ListaCardsState extends State<ListaCards> {
   Widget build(BuildContext context) {
     findAll().then((valueReturned) {
       widget._listaCardsItem.addAll(valueReturned);
-      print(valueReturned.toString());
+      print("Valores retornados: $valueReturned");
       print('quantidade de cards salvos: $widget._listaCardsItem.length ');
     });
     return Scaffold(
